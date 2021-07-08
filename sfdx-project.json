@@ -1,0 +1,20 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "EDA Interoperability Demo",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "name": "EDAInteropDemo",
+    "namespace": "edainteropdemo",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "52.0",
+    "packageAliases": {
+        "EDA Interoperability Demo": "0Ho1U0000004CUBSA2",
+        "EDA Interoperability Demo@0.1.0-1": "04t1U000007U2NjQAK",
+        "EDA Interoperability Demo@0.1.0-2": "04t1U000007U2Q4QAK"
+    }
+}
