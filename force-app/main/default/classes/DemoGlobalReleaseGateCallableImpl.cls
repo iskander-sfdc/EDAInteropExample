@@ -29,7 +29,7 @@
  * @date 2021
  * @group EDA Setup
  * @group-content
- * @description A demo release gating class to simulate EDA release gates
+ * @description A test release gating class to simulate EDA release gates
  */
 global with sharing class DemoGlobalReleaseGateCallableImpl implements Callable {
     public static final String GET_ACTION = 'releasegate.get';
