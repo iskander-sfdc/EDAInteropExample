@@ -34,11 +34,6 @@
  * The release gate state is stored in a contact record which is created when this gate is activated
  */
 global with sharing class DemoReleaseGateCallableImpl implements Callable {
-    public static final String GET_ACTION = 'releasegate.get';
-    public static final String ACTIVATE_ACTION = 'releasegate.activate';
-    public static final String VERSION_PARAMETER = 'version';
-    public static final String PRODUCT_PARAMETER = 'product';
-    public static final String GATE_PARAMETER = 'gate';
     public static final String MOCK_CONTACT_PREFIX = 'callableinteropdemo_';
     public static final String DEMO_PRODUCT_NAME = 'ExampleProduct1';
 
@@ -173,13 +168,13 @@ global with sharing class DemoReleaseGateCallableImpl implements Callable {
     public Object call(String action, Map<String, Object> args) {
         System.debug('Executing callable action: ' + action);
         String result;
-        if (action == GET_ACTION) {
-            result = this.getReleaseGates((Decimal) args.get(VERSION_PARAMETER));
-        } else if (action == ACTIVATE_ACTION) {
+        if (action == ReleaseGateModel.GET_ACTION) {
+            result = this.getReleaseGates((Decimal) args.get(ReleaseGateModel.VERSION_PARAMETER));
+        } else if (action == ReleaseGateModel.ACTIVATE_ACTION) {
             result = this.activateReleaseGate(
-                (Decimal) args.get(VERSION_PARAMETER),
-                (String) args.get(PRODUCT_PARAMETER),
-                (String) args.get(GATE_PARAMETER)
+                (Decimal) args.get(ReleaseGateModel.VERSION_PARAMETER),
+                (String) args.get(ReleaseGateModel.PRODUCT_PARAMETER),
+                (String) args.get(ReleaseGateModel.GATE_PARAMETER)
             );
         } else {
             throw new IllegalArgumentException('Method not implemented');

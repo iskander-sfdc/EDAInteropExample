@@ -32,6 +32,12 @@
  * @description Release gating model classes
  */
 public with sharing class ReleaseGateModel {
+    public static final String GET_ACTION = 'releasegate.get';
+    public static final String ACTIVATE_ACTION = 'releasegate.activate';
+    public static final String VERSION_PARAMETER = 'version';
+    public static final String PRODUCT_PARAMETER = 'product';
+    public static final String GATE_PARAMETER = 'gate';
+
     public class CallableError {
         public Integer code;
         public String message;
